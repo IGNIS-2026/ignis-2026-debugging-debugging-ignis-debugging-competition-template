@@ -32,7 +32,7 @@ int main() {
     int n = 6;
     int k = 3;
     
-    int *max_sum; 
+    int max_sum; 
 
     int *res = processArray(arr, n, k, max_sum);
 
