@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int* processArray(int *arr, int n, int k, int *maxSum) {
-    int *reversed = malloc(n); 
+    int *reversed = (int*)malloc(n*sizeof(int)); 
 
     for(int i = 0; i <= n; i++) { 
         reversed[i] = arr[n - i]; 
@@ -34,7 +34,7 @@ int main() {
     
     int max_sum; 
 
-    int *res = processArray(arr, n, k, max_sum);
+    int *res = processArray(arr, n, k, &max_sum);
 
     printf("Max sum of subarray of size %d is: %d\n", k, *max_sum);
     
